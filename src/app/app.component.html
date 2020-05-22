@@ -1,0 +1,50 @@
+<nav class="navbar navbar-default" role="navigation">   
+  <div class="navbar-header">   
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" routerLink=""><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+  <div class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active"><a routerLink="news">NEWS</a></li>
+      <li class="dropdown" routerLinkActive="active"> 
+        <a data-toggle="dropdown" routerLink="weather">WEATHER<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Day</a></li>
+          <li><a href="#">Month</a></li>
+          <li><a href="#">Year</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Other</a></li>
+        </ul>
+      </li> 
+      <li routerLinkActive="active"> <a routerLink="videos">VIDEOS</a> </li>
+      <li routerLinkActive="active"> <a routerLink="blogs">BLOGS</a> </li>
+      <li routerLinkActive="active"> <a routerLink="personalities">PERSONALITIES</a> </li>
+      
+    </ul>
+    <form class="navbar-form navbar-right" role="form">
+      <div class="input-group">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-warning btn-sm" routerLink="auth" *ngIf="authValue==='SIGN IN'">{{authValue}}</button>
+          </span>
+      </div>
+    </form>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <button type="button" class="btn btn-warning btn-lg btn-block" style="border-radius: 0px"><span class="pull-left glyphicon glyphicon-signal"></span>...THE FLASH FLOOD WARNING REMAINS IN EFFECT ...        <span class="pull-right glyphicon glyphicon-menu-right"></span>
+      </button>
+    </div>
+  </div>  
+</div>  
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+

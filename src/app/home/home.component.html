@@ -1,0 +1,32 @@
+<!--div class="row">
+    <div class="col-xs-5">
+      <p><a href="#">{{ lastUpdate| date: 'EEEE, d MMMM' }}</a></p>
+      <h2>weather of the week: </h2>
+    </div>
+</div--->
+
+<!--div class="row">
+  <ng-container *ngFor="let weather of weathers; let i=index" -->
+    <a [routerLink]="forecast">
+      <div class="col-xs-3 afficher" >
+        <div class="row">
+          <div class="col-lg-6">{{this.weather.city}} : {{city}}
+            <div class="row">
+              <div class="col-lg-12">
+                <img src={{this.weather.days[i].img}} /></div>
+              </div>
+              <div class="row">
+                <div class=" col-lg-12">Sunny
+                  <p>RealFeel® 31°</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <span style="font-size: 50px">{{this.weather.days[i].pronostic}}°
+              </span>
+            </div>
+          </div>      
+        </div>
+      </a>  
+    <!--/ng-container>
+</div-->

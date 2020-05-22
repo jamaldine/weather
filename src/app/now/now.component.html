@@ -1,0 +1,9 @@
+<app-wheather-forecast></app-wheather-forecast>
+<!--[id]="weather.id"-->
+<p>
+  {{city}}
+</p>
+<p>
+  {{ this.meteoService.getAppareilById(city).city }}
+</p>
+<a routerLink="">Retour à la liste</a>  

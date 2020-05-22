@@ -1,0 +1,30 @@
+<!--ul class="nav nav-tabs">
+	<li routerLinkActive="active"><a routerLink="/now/:id">NOW</a> </li>
+  	<li routerLinkActive="active"><a routerLink="/minutecast/:id">MINUTECAST®</a></li>
+  	<li routerLinkActive="active"><a routerLink="/weekend/:id">WEEKEND</a></li>
+  	<li routerLinkActive="active"><a routerLink="/extended/:id">EXTENDED</a></li>
+  	<li routerLinkActive="active"><a routerLink="/mounth/:id">MOUNTH</a></li>
+  	<li routerLinkActive="active"><a routerLink="/radar/:id">RADAR</a></li>
+  	<li routerLinkActive="active"><a routerLink="/wintercast">WINTERCAST</a></li>
+  </ul-->
+<div class="row">
+    <div class="col-xs-5">
+      <p><a href="#">{{ lastUpdate| date: 'EEEE, d MMMM' }}</a></p>
+      <h2>weather of the week: </h2>
+    </div>
+</div>
+
+<ul>
+	<app-home *ngFor="let weather of api_weathers ; let i = index" 
+			[city]="weather.city" 
+			[indexHome]="i"
+			[id]="weather.id">
+	
+	</app-home>
+</ul>
+
+id = {{id}}
+city = {{city}}
+
+
+<!--[indexHome]="i" -->
